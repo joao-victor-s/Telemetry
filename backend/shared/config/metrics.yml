@@ -1,0 +1,36 @@
+metrics:
+  - namespace: dummy.int
+    fields:
+      - name: int
+        schema:
+          type: integer
+  - namespace: dummy2.int
+    fields:
+      - name: int
+        schema:
+          type: integer
+  - namespace: supervisor.steering
+    fields:
+      - name: int
+        schema:
+          type: integer
+  - namespace: supervisor.yolo.coneboxes
+    description: Cone boxes for yolo
+    fields:
+      - name: boxes
+        description: List of boxes
+        schema:
+          type: list
+          schema:
+            upper-left:
+              type: integer
+            upper-right:
+              type: integer
+            lower-left:
+              type: integer
+            lower-right:
+              type: integer
+  - namespace: emulator.cones
+    description: fodase
+    fields:
+      - name: cones

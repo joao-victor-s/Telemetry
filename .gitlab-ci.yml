@@ -1,0 +1,20 @@
+build:
+  image: docker/compose:debian-1.29.2
+  services:
+    - docker:19.03.12-dind
+  before_script:
+    - apt-get update
+    - apt-get install -y curl
+    - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+    - apt-get install -y nodejs npm
+    - npm i --global yarn
+    - yarn --cwd ./grafana/telemetry-datasource install --frozen-lockfile
+  script:
+    - sh scripts/build.sh
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - sh scripts/push.sh
+
+  only:
+    - tags
+  except:
+    - /^(?!master).+@/

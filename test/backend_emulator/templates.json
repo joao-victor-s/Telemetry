@@ -1,0 +1,39 @@
+{
+    "test": {
+        "int": 5,
+        "float": 5.0,
+        "str": "str",
+        "randstr": "<random>",
+
+        "intlist": [10],
+        "dictlist": [{
+            "int": 1
+        }],
+
+        "dict": {
+            "key": "<random>"
+        }
+    },
+    "supervisor.steering": {
+        "value": 1
+    },
+
+    "slam.car_pose": {
+        "x": 0,
+        "y": 0,
+        "orientation": 0
+    },
+    "slam.cones": {
+        "blue": [{"x": 10, "y": 10}],
+        "yellow": [{"x": 10, "y": 10}]
+    },
+    "emulator.car_pose": {
+        "x": 0,
+        "y": 0,
+        "orientation": 0
+    },
+    "emulator.local_cones": {
+        "blue": [{"x": 10, "y": 10}],
+        "yellow": [{"x": 10, "y": 10}]
+    }
+}

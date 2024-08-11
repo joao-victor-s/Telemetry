@@ -1,0 +1,749 @@
+{
+  "__inputs": [],
+  "__requires": [
+    {
+      "type": "panel",
+      "id": "gauge",
+      "name": "Gauge",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "8.0.2"
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 1,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "IMD"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "BMS"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "C"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "BSPD"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "D"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Safety OK"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "E"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "AIR-"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "F"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "AIR+"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "G"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Precharge Time Exceeded"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "H"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Discharge Time Exceeded"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 13,
+        "x": 0,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "fieldsQuery": "value",
+          "namespace": "IMD",
+          "refId": "A",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "BMS",
+          "refId": "B",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "BSPD",
+          "refId": "C",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "Safety_OK",
+          "refId": "D",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "AIR-",
+          "refId": "E",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "AIR+",
+          "refId": "F",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "Precharge_Time_Exceeded",
+          "refId": "G",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "Discharge_Time_Exceeded",
+          "refId": "H",
+          "type": "Metric"
+        }
+      ],
+      "title": "ACD",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 1,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Error code M0"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Error code M13"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "C"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Act Error Status A0"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "D"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Act Error Status B0"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "E"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Act Error Status A13"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "F"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Act Error Status B13"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 11,
+        "x": 13,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "fieldsQuery": "value",
+          "namespace": "Error code M0",
+          "refId": "A",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "Error code M13",
+          "refId": "B",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "act_ErrorStatus A0",
+          "refId": "C",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "act_ErrorStatus B0",
+          "refId": "D",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "act_ErrorStatus A13",
+          "refId": "E",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "act_ErrorStatus B13",
+          "refId": "F",
+          "type": "Metric"
+        }
+      ],
+      "title": "VCU",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 1,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Under Voltage"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Over Voltage"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "C"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Discharge Over Current"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "D"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Charge Over Current"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "E"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Cell Module Overheat"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "F"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Leakage"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "G"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "No Cell Communication"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "H"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Low Voltage W"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "I"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "High Current W"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "J"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "High Temperature W"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "K"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Cell Overheat"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "L"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "No Current Sensor"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "M"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Pack Under Voltage"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "N"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Validity"
+              },
+              {
+                "id": "max"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "red",
+                      "value": null
+                    },
+                    {
+                      "color": "green",
+                      "value": 39
+                    },
+                    {
+                      "color": "red",
+                      "value": 40
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 8
+      },
+      "id": 2,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Under_voltage",
+          "refId": "A",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Over_voltage",
+          "refId": "B",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Discharge_over_current",
+          "refId": "C",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Charge_over_current",
+          "refId": "D",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Cell_module_Overheat",
+          "refId": "E",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Leakage",
+          "refId": "F",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "No_cell_Communication",
+          "refId": "G",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Low_voltage_W",
+          "refId": "H",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "High_current_W",
+          "refId": "I",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "High_temperature_W",
+          "refId": "J",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Cell_Overheat",
+          "refId": "K",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "No_Current_Sensor",
+          "refId": "L",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Pack_Under_Voltage",
+          "refId": "M",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "hide": false,
+          "namespace": "Validity",
+          "refId": "N",
+          "type": "Metric"
+        }
+      ],
+      "title": "BMS Diagnostic",
+      "type": "gauge"
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 30,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2023-07-23T04:40:22.719Z",
+    "to": "2023-07-23T04:50:22.721Z"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Diagnostic",
+  "uid": "TciWaSq4k",
+  "version": 18
+}

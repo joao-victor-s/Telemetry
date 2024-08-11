@@ -1,0 +1,12 @@
+start:
+  required: true
+  type: list
+  schema:
+    coerce: integer
+    type: integer
+length:
+  required: true
+  type: list
+  schema:
+    coerce: integer
+    type: integer

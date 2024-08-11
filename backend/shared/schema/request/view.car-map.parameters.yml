@@ -1,0 +1,6 @@
+delta:
+  required: false
+  type: list
+  schema:
+    coerce: integer
+    type: integer

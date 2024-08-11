@@ -1,0 +1,14 @@
+import logging
+
+logger = logging.getLogger()
+
+APPLICATION_NAME = "metrics-server"
+
+APPLICATION_HOST = "0.0.0.0"
+APPLICATION_PORT = 8080
+
+APPLICATION_WORKERS = 4
+
+ALLOW_METRIC_MODIFY_HTTP = True
+
+SUBSCRIPTION_PUSH_RATE = 1000

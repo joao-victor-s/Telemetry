@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "925a02c6-b579-4dde-b18a-8f9030386ae9",
+		"name": "viz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/healthcheck",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metrics summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metric snapshot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/supervisor.steering/snapshot",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"supervisor.steering",
+						"snapshot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metric time history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/secondary.steering_diff/history/time?start=0&length=10000000000",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"secondary.steering_diff",
+						"history",
+						"time"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "0"
+						},
+						{
+							"key": "length",
+							"value": "10000000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update metric (driverless.vision.yellow_cones)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fields\": {\n        \"cones\": [\n            {\n                \"x\": 2,\n                \"y\": 2\n            }\n        ]\n\t},\n\t\"time\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/driverless.vision.yellow_cones/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"driverless.vision.yellow_cones",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update metric (supervisor.steering)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fields\": {\n        \"value\": 90\n\t},\n\t\"time\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/supervisor.steering/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"supervisor.steering",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update metric (slam.cones)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fields\": {\n        \"yellow\": [\n            {\"x\": 1, \"y\": 1},\n            {\"x\": 1, \"y\": 2},\n            {\"x\": 1, \"y\": 3},\n            {\"x\": 1, \"y\": 4},\n            {\"x\": 1, \"y\": 5},\n            {\"x\": 1, \"y\": 6},\n            {\"x\": 1, \"y\": 7},\n            {\"x\": 1, \"y\": 8},\n            {\"x\": 1, \"y\": 9},\n            {\"x\": 1, \"y\": 10}\n        ],\n        \"blue\": [\n            {\"x\": -1, \"y\": 1},\n            {\"x\": -1, \"y\": 2},\n            {\"x\": -1, \"y\": 3},\n            {\"x\": -1, \"y\": 4},\n            {\"x\": -1, \"y\": 5},\n            {\"x\": -1, \"y\": 6},\n            {\"x\": -1, \"y\": 7},\n            {\"x\": -1, \"y\": 8},\n            {\"x\": -1, \"y\": 9},\n            {\"x\": -1, \"y\": 10}\n        ]\n\t},\n\t\"time\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/slam.cones/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"slam.cones",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update metric (slam.car_pose)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fields\": {\n        \"x\": 0,\n        \"y\": -5,\n        \"orientation\": 90\n\t},\n\t\"time\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/slam.car_pose/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"slam.car_pose",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update metric (pp.path_points)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n         \"path\": [\n            {\"x\": 0, \"y\": 1},\n            {\"x\": 0, \"y\": 2},\n            {\"x\": 0, \"y\": 3},\n            {\"x\": 0, \"y\": 4}\n        ]\n    },\n\t\"time\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/pp.path_points/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"pp.path_points",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update metric (emulator.car_pose)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fields\": {\n        \"x\": 0,\n        \"y\": 1,\n        \"orientation\": 0\n\t},\n\t\"time\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/emulator.car_pose/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"emulator.car_pose",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update metric (emulator.local_cones)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fields\": {\n        \"yellow\": [\n            {\"x\": 2, \"y\": 1},\n            {\"x\": 2, \"y\": 2},\n            {\"x\": 2, \"y\": 3},\n            {\"x\": 2, \"y\": 4},\n            {\"x\": 2, \"y\": 5},\n            {\"x\": 2, \"y\": 6},\n            {\"x\": 2, \"y\": 7},\n            {\"x\": 2, \"y\": 8},\n            {\"x\": 2, \"y\": 9},\n            {\"x\": 2, \"y\": 10}\n        ],\n        \"blue\": [\n            {\"x\": -2, \"y\": 1},\n            {\"x\": -2, \"y\": 2},\n            {\"x\": -2, \"y\": 3},\n            {\"x\": -2, \"y\": 4},\n            {\"x\": -2, \"y\": 5},\n            {\"x\": -2, \"y\": 6},\n            {\"x\": -2, \"y\": 7},\n            {\"x\": -2, \"y\": 8},\n            {\"x\": -2, \"y\": 9},\n            {\"x\": -2, \"y\": 10}\n        ]\n\t},\n\t\"time\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/metrics/emulator.local_cones/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"metrics",
+						"emulator.local_cones",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

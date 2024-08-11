@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  grafana:
+    build:
+      context: ../grafana
+    env_file: grafana.dev.env
+    volumes:
+      - type: bind
+        source: ../grafana/telemetry-datasource/dist
+        target: /var/lib/grafana/plugins/telemetry-datasource
+        read_only: true
+      # - type: bind
+      #   source: ../grafana/carview/dist
+      #   target: /var/lib/grafana/plugins/carview
+      #   read_only: true

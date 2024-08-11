@@ -1,0 +1,1175 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 9,
+  "links": [],
+  "panels": [
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "max": 4.5,
+          "min": 2.5,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_48",
+          "refId": "A",
+          "type": "Metric"
+        }
+      ],
+      "title": "Mean Voltage Stack 3 (V)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 4.55,
+          "min": 2,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "48"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "49"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "C"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "50"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "D"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "51"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "E"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "52"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "F"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "53"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "G"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "54"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "H"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "55"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "I"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "56"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "J"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "57"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "K"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "58"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "L"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "59"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "M"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "60"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "N"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "61"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "O"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "62"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "P"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "63"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Q"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "64"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "R"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "65"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "S"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "66"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "T"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "67"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "U"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "68"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "V"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "69"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "W"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "70"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "X"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "71"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 16,
+        "x": 8,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_48",
+          "refId": "A",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_49",
+          "refId": "B",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_50",
+          "refId": "C",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_51",
+          "refId": "D",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_52",
+          "refId": "E",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_53",
+          "refId": "F",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_54",
+          "refId": "G",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_55",
+          "refId": "H",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_56",
+          "refId": "I",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_57",
+          "refId": "J",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_58",
+          "refId": "K",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_59",
+          "refId": "L",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_60",
+          "refId": "M",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_61",
+          "refId": "N",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_62",
+          "refId": "O",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_63",
+          "refId": "P",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_64",
+          "refId": "Q",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_65",
+          "refId": "R",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_66",
+          "refId": "S",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_67",
+          "refId": "T",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_68",
+          "refId": "U",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_69",
+          "refId": "V",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_70",
+          "refId": "W",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "vcell_71",
+          "refId": "X",
+          "type": "Metric"
+        }
+      ],
+      "title": "Voltage Stack 3 (V) ",
+      "type": "bargauge"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "semi-dark-yellow",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "max": 60,
+          "min": 15,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 40
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 8
+      },
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_48",
+          "refId": "A",
+          "type": "Metric"
+        }
+      ],
+      "title": "Mean Temperature Stack 3 (°C)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "max": 4.55,
+          "min": 2,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 38
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "48"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "49"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "C"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "50"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "D"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "51"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "E"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "52"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "F"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "53"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "G"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "54"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "H"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "55"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "I"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "56"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "J"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "57"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "K"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "58"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "L"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "59"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "M"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "60"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "N"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "61"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "O"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "62"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "P"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "63"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Q"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "64"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "R"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "65"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "S"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "66"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "T"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "67"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "U"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "68"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "V"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "69"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "W"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "70"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "X"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "71"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 16,
+        "x": 8,
+        "y": 8
+      },
+      "id": 11,
+      "options": {
+        "displayMode": "gradient",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "text": {}
+      },
+      "pluginVersion": "8.0.2",
+      "targets": [
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_48",
+          "refId": "A",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_49",
+          "refId": "B",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_50",
+          "refId": "C",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_51",
+          "refId": "D",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_52",
+          "refId": "E",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_53",
+          "refId": "F",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_54",
+          "refId": "G",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_55",
+          "refId": "H",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_56",
+          "refId": "I",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_57",
+          "refId": "J",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_58",
+          "refId": "K",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_59",
+          "refId": "L",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_60",
+          "refId": "M",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_61",
+          "refId": "N",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_62",
+          "refId": "O",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_63",
+          "refId": "P",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_64",
+          "refId": "Q",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_65",
+          "refId": "R",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_66",
+          "refId": "S",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_67",
+          "refId": "T",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_68",
+          "refId": "U",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_69",
+          "refId": "V",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_70",
+          "refId": "W",
+          "type": "Metric"
+        },
+        {
+          "fieldsQuery": "value",
+          "namespace": "tcell_71",
+          "refId": "X",
+          "type": "Metric"
+        }
+      ],
+      "title": "Temperature Stack 3 (°C)",
+      "type": "bargauge"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 30,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Stack 3",
+  "uid": "SRKfeIqVs",
+  "version": 12
+}

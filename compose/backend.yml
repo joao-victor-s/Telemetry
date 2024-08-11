@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  eventhook:
+    image: registry.gitlab.com/unicamperacing/ia/driverless-2020/viz/eventhook
+    depends_on:
+      - eventpersister
+    ports:
+      - "9512:${EVENTS_PORT}/udp"
+
+  eventpersister:
+    image: registry.gitlab.com/unicamperacing/ia/driverless-2020/viz/eventpersister
+    depends_on:
+      - redis
+
+  metrics:
+    image: registry.gitlab.com/unicamperacing/ia/driverless-2020/viz/metrics
+    depends_on:
+      - redis
+    ports:
+      - "8080:${METRICS_PORT}"
+
+  redis:
+    image: redis

@@ -1,0 +1,57 @@
+default_language_version:
+  python: python3.8
+
+repos:
+  # Check config files. Deny commit to master, credentials and large files
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.5.0
+    hooks:
+      - id: no-commit-to-branch
+      # - id: check-added-large-files
+      - id: check-yaml
+      - id: check-json
+        exclude: ^.vscode/.+\.json$
+      - id: detect-private-key
+      - id: end-of-file-fixer
+
+  ## BACKEND ##
+
+  # Organize imports
+  - repo: https://github.com/timothycrosley/isort
+    rev: 4.3.21-2
+    hooks:
+      - id: isort
+        args: ["--virtual-env", "./venv"]
+        exclude: ^frontend/
+        files: .+\.py
+
+  # Code formatters
+  - repo: https://github.com/psf/black
+    rev: 19.10b0
+    hooks:
+      - id: black
+        exclude: ^frontend/
+        files: .+\.py
+
+  # Linters
+  - repo: https://github.com/PyCQA/pylint
+    rev: pylint-2.4.4
+    hooks:
+      - id: pylint
+        exclude: ^frontend/
+        files: .+\.py
+
+  ## FRONTEND ##
+
+  - repo: local
+    hooks:
+      - id: eslint
+        name: eslint
+        language: node
+        files: ^frontend/.*\.(ts|js|tsx|jsx)
+        entry: eslint -c frontend/.eslintrc --ignore-path frontend/.eslintignore
+      - id: prettier
+        name: prettier
+        language: node
+        files: ^frontend/
+        entry: prettier -c frontend/.prettierrc --ignore-path frontend/.prettierignore

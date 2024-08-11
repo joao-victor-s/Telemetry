@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  eventhook:
+    build:
+      context: ../backend
+      target: eventhook
+    volumes:
+      - type: bind
+        source: ../backend
+        target: /app
+        read_only: true
+
+  eventpersister:
+    build:
+      context: ../backend
+      target: eventpersister
+    volumes:
+      - type: bind
+        source: ../backend
+        target: /app
+        read_only: true
+
+  metrics:
+    build:
+      context: ../backend
+      target: metrics
+    volumes:
+      - type: bind
+        source: ../backend
+        target: /app
+        read_only: true
+
+  redis:
+    image: redis
+
+volumes:
+  backend:
