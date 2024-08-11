@@ -1,6 +1,4 @@
-This repository stores all the relevant code for Unicamp E-Racing Telemetry.
-
-If you want an in-depth view of how it works or how to develop it, please refer to the [Wiki](https://gitlab.com/unicamperacing/autonomous-systems/driverless/sauva/telemetry/onboarding/-/wikis/home) 
+This repository contains portions of the code for the Unicamp E-Racing telemetry system, showcasing the work done for demonstration purposes.
 
 # Installing and running
 
