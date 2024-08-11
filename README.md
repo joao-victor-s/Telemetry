@@ -1,4 +1,8 @@
+# Introduction
+
 This repository contains portions of the code for the Unicamp E-Racing telemetry system, showcasing the work done for demonstration purposes.
+
+In the "How It Works" folder, you'll find detailed information about the architecture. Feel free to explore!
 
 # Installing and running
 
